@@ -14,7 +14,7 @@ import {
 import { PhysicianCard } from "@/components/physician-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ButtonLink } from "@/components/ui/button";
-import { locations, physicians, services, site, stats } from "@/lib/content";
+import { assetPath, locations, physicians, services, site, stats } from "@/lib/content";
 
 const pathways = [
   {
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="absolute inset-x-8 top-10 h-[430px] rounded-md bg-[#0b4f6c]" />
             <div className="absolute left-0 top-0 w-[70%] overflow-hidden rounded-md bg-white shadow-xl">
               <Image
-                src="/scraped-assets/02-img-0299.webp"
+                src={assetPath("/scraped-assets/02-img-0299.webp")}
                 alt="Cape Coral Hospital emergency department"
                 width={760}
                 height={560}
@@ -95,7 +95,7 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 right-0 w-[58%] overflow-hidden rounded-md border-8 border-[#f3f8fa] bg-white shadow-xl">
               <Image
-                src="/scraped-assets/03-homecollage.webp"
+                src={assetPath("/scraped-assets/03-homecollage.webp")}
                 alt="Cape Coral Emergency Physicians collage"
                 width={620}
                 height={430}

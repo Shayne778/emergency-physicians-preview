@@ -13,6 +13,12 @@ export type Physician = {
   }>;
 };
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function assetPath(path: string) {
+  return `${publicBasePath}${path}`;
+}
+
 export type Service = {
   title: string;
   description: string;
@@ -46,7 +52,7 @@ export const site = {
   fax: "239-424-4039",
   email: "admin@ccepfl.com",
   previewNotice: "Private preview",
-  logo: "/scraped-assets/01-new-ccep-logo-047dec-blue-h-rez.webp",
+  logo: assetPath("/scraped-assets/01-new-ccep-logo-047dec-blue-h-rez.webp"),
   sourceUrl: "https://capecoralemergencyphysicians.com/",
 };
 
@@ -86,7 +92,7 @@ export const physicians: Physician[] = [
     credentials: "D.O., M.H.A.",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Osteopathic Emergency Medicine", "Physician Leadership"],
-    image: "/scraped-assets/07-alsalman.webp",
+    image: assetPath("/scraped-assets/07-alsalman.webp"),
     bio:
       "Florida native who received his medical degree from University of Osteopathic Medicine and Health Sciences in Iowa and completed residency at Mt. Sinai Medical Center in Miami.",
     highlights: [
@@ -121,7 +127,7 @@ export const physicians: Physician[] = [
     credentials: "MD",
     role: "Attending Physician",
     specialties: ["Emergency Medicine", "Clinical Care", "Patient-Centered Care"],
-    image: "/scraped-assets/08-beechy-christopher.webp",
+    image: assetPath("/scraped-assets/08-beechy-christopher.webp"),
     bio:
       "Ohio native with an undergraduate degree in Biochemistry from Denison University and medical/residency training at Wright State University.",
     highlights: [
@@ -150,7 +156,7 @@ export const physicians: Physician[] = [
     credentials: "MD, MS, CAQ-SM, CSCS",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Sports Medicine", "Strength and Conditioning"],
-    image: "/scraped-assets/09-keith-burley.webp",
+    image: assetPath("/scraped-assets/09-keith-burley.webp"),
     bio:
       "Ontario native, emergency physician, and sports medicine specialist with training at Michigan State, University of Wisconsin, and University of Cincinnati.",
     highlights: [
@@ -191,7 +197,7 @@ export const physicians: Physician[] = [
     credentials: "D.O.",
     role: "Attending Physician",
     specialties: ["Emergency Medicine", "Advanced Provider Recruitment", "Clinical Operations"],
-    image: "/scraped-assets/10-cox-courtney-do.webp",
+    image: assetPath("/scraped-assets/10-cox-courtney-do.webp"),
     bio:
       "New Jersey native with undergraduate studies at Gettysburg College, medical training at Lake Erie College of Osteopathic Medicine, and emergency medicine residency at Inspira Medical Center.",
     highlights: [
@@ -232,7 +238,7 @@ export const physicians: Physician[] = [
     credentials: "MD, MPH",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Biostatistics", "Epidemiology"],
-    image: "/scraped-assets/11-cudnik-website-photo-ccep-michael-cudnik.webp",
+    image: assetPath("/scraped-assets/11-cudnik-website-photo-ccep-michael-cudnik.webp"),
     bio:
       "Ohio native with medical training at Wright State University Boonshoft School of Medicine and public health training at Oregon Health & Science University.",
     highlights: [
@@ -277,7 +283,7 @@ export const physicians: Physician[] = [
     credentials: "M.D., F.A.A.E.M., D.A.C.M.T.",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Medical Toxicology", "Disaster Preparedness"],
-    image: "/scraped-assets/12-dougherty.webp",
+    image: assetPath("/scraped-assets/12-dougherty.webp"),
     bio:
       "Pennsylvania native who trained at Jefferson Medical College and the Medical College of Pennsylvania, including fellowship training in Medical Toxicology.",
     highlights: [
@@ -322,7 +328,7 @@ export const physicians: Physician[] = [
     credentials: "DO, FAAEM",
     role: "Attending Physician",
     specialties: ["Emergency Medicine", "Ultrasound", "Austere Care"],
-    image: "/scraped-assets/13-screen-shot-2021-09-25-at-7-33-46-pm.webp",
+    image: assetPath("/scraped-assets/13-screen-shot-2021-09-25-at-7-33-46-pm.webp"),
     bio:
       "Washington State native with training at Pacific Lutheran University, Kansas City University of Medicine and Biosciences, and Naval Medical Center San Diego.",
     highlights: [
@@ -371,7 +377,7 @@ export const physicians: Physician[] = [
     credentials: "D.O.",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Osteopathic Emergency Medicine", "Clinical Care"],
-    image: "/scraped-assets/14-esposito.webp",
+    image: assetPath("/scraped-assets/14-esposito.webp"),
     bio:
       "Florida native who received his medical degree from Nova Southeastern University and completed residency at South Pointe Hospital.",
     highlights: [
@@ -407,7 +413,7 @@ export const physicians: Physician[] = [
     credentials: "MD, FACEP",
     role: "President of CCEP",
     specialties: ["Emergency Medicine", "Quality Review", "Hospital Leadership"],
-    image: "/scraped-assets/15-a15-2-michael-schultz.webp",
+    image: assetPath("/scraped-assets/15-a15-2-michael-schultz.webp"),
     bio:
       "Florida native with undergraduate training at the University of Florida, medical training at Eastern Virginia Medical School, and residency at Carolinas Medical Center.",
     highlights: [
@@ -458,7 +464,7 @@ export const physicians: Physician[] = [
     credentials: "D.O.",
     role: "Partner Physician",
     specialties: ["Emergency Medicine", "Osteopathic Medicine", "Clinical Care"],
-    image: "/scraped-assets/16-kurt-urban.webp",
+    image: assetPath("/scraped-assets/16-kurt-urban.webp"),
     bio:
       "Michigan native who received his medical degree from Michigan State University College of Osteopathic Medicine and completed emergency medicine residency in Lansing, Michigan.",
     highlights: [
