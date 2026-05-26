@@ -39,6 +39,7 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_PUBLIC_BASE_PATH: "/emergency-physicians-preview"
+          NEXT_PUBLIC_SITE_URL: "https://shayne778.github.io/emergency-physicians-preview"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

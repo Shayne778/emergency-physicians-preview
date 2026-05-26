@@ -3,23 +3,40 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://shayne778.github.io/emergency-physicians-preview";
+const socialImage = `${siteUrl}/scraped-assets/01-new-ccep-logo-047dec-blue-h-rez.webp`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://preview.example.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Emergency Physicians Group | Private Preview",
-    template: "%s | Emergency Physicians Group",
+    default: "Cape Coral Emergency Physicians",
+    template: "%s | Cape Coral Emergency Physicians",
   },
   description:
-    "A private preview rebuild for an emergency physician group, focused on modern design, clear physician profiles, and fast access to care information.",
+    "Independent, physician-led emergency care serving Cape Coral since 1985.",
   robots: {
     index: false,
     follow: false,
     nocache: true,
   },
   openGraph: {
-    title: "Emergency Physicians Group",
-    description: "Private preview of a modern emergency physician group website.",
+    title: "Cape Coral Emergency Physicians",
+    description: "Independent, physician-led emergency care serving Cape Coral since 1985.",
+    url: siteUrl,
+    siteName: "Cape Coral Emergency Physicians",
+    images: [
+      {
+        url: socialImage,
+        alt: "Cape Coral Emergency Physicians logo",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cape Coral Emergency Physicians",
+    description: "Independent, physician-led emergency care serving Cape Coral since 1985.",
+    images: [socialImage],
   },
 };
 
