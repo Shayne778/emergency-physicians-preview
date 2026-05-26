@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Building2,
@@ -121,7 +122,7 @@ export default function Home() {
           {pathways.map((pathway) => {
             const Icon = pathway.icon;
             return (
-              <a
+              <Link
                 key={pathway.title}
                 href={pathway.href}
                 className="group rounded-md border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:shadow-lg"
@@ -134,7 +135,7 @@ export default function Home() {
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#0b4f6c]">
                   Learn more <ArrowRight size={16} className="transition group-hover:translate-x-1" />
                 </span>
-              </a>
+              </Link>
             );
           })}
         </div>
